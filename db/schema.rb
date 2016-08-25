@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20160825143249) do
 
   create_table "todos", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.boolean "completed", default: false
+    t.string  "name"
+    t.string  "description"
+    t.boolean "completed",   default: false
   end
 
 end
