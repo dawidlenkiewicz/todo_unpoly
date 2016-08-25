@@ -1,11 +1,12 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.all
+    if params[:status]
+      @todos = params[:status] == "completed" ? Todo.completed : Todo.current
+    else
+      @todos = Todo.all
+    end
   end
 
   def form
-  end
-
-  def test
   end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "todos#index"
 
-  get "test", to: "todos#test"
+  resources :todos, only: [:index, :complete]
   get "form", to: "todos#form"
 end

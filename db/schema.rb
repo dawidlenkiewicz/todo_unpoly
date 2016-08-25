@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825124229) do
+ActiveRecord::Schema.define(version: 20160825143249) do
 
   create_table "todos", force: :cascade do |t|
-    t.string "name"
+    t.string  "name"
+    t.boolean "completed", default: false
   end
 
 end
