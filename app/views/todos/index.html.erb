@@ -1,3 +1,10 @@
-<%- @todos.each do |todo| %>
-  <%= todo.name %>
-<% end %>
+<h3>Todo List:</h3>
+
+<%= link_to "Add new todo", "#", class: "btn btn-default", "up-tooltip" => "Adds new todo" %>
+<%= link_to "Test click", "/test", class: "btn btn-default", "up-modal" => ".popup" %>
+
+<ul class="list-group">
+  <% @todos.each do |todo| %>
+    <li class="list-group-item"><%= todo.name %></li>
+  <% end %>
+</ul>

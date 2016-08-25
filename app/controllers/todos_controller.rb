@@ -5,4 +5,7 @@ class TodosController < ApplicationController
 
   def form
   end
+
+  def test
+  end
 end
