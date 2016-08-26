@@ -15,7 +15,6 @@
 //= require bootstrap-sprockets
 //= require unpoly
 //= require unpoly-bootstrap3
-//= require turbolinks
 //= require_tree .
 
 up.compiler('.spinner', function($element) {
