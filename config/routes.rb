@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :todos, only: [:index, :complete, :new, :create]
   get "test", to: "todos#test"
+  get "popup", to: "todos#popup"
 end

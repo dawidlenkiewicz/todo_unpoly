@@ -27,6 +27,9 @@ class TodosController < ApplicationController
     end
   end
 
+  def popup
+  end
+
   private
 
   def todo_params
