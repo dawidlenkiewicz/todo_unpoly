@@ -10,6 +10,10 @@
 
 <ul class="todos list-group">
   <% @todos.each do |todo| %>
-    <li class="list-group-item"><%= todo.name %></li>
+    <li class="list-group-item <%= 'list-group-item-success' if todo.completed? %>" id=<%= dom_id(todo) %>>
+      <%= form_for todo, url: toggle_todo_path(todo), html: { "up-target" => "#todo_#{todo.id}" } do |f| %>
+        <%= f.check_box :completed, "up-autosubmit" => "" %> <%= todo.name %>
+      <% end %>
+    </li>
   <% end %>
 </ul>

@@ -9,4 +9,15 @@ class TodosController < ApplicationController
 
   def form
   end
+
+  def toggle
+    @todo = Todo.find(params[:id])
+    @todo.update(todo_params)
+  end
+
+  private
+
+  def todo_params
+    params.require(:todo).permit(:completed)
+  end
 end
