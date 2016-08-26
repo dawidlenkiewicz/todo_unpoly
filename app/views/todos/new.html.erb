@@ -1,7 +1,7 @@
 <div class="todo-form">
   <%= render "form" %>
 
-  <%= link_to "Validation rules", popup_path, "up-popup" => ".popup", "up-position" => "bottom-right" %>
+  <%= link_to "Validation rules", popup_path, "up-popup" => ".popup", "up-position" => "top-left" %>
 
   <table class="table">
     <thead>
@@ -19,6 +19,10 @@
       </tbody>
     <% end %>
   </table>
+</div>
+
+<div class="modal-box">
+  <%= link_to "Modal", modal_path, "up-modal" => ".modal-box" %>
 </div>
 
 <div class="wow">
