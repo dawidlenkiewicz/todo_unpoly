@@ -35,6 +35,9 @@ class TodosController < ApplicationController
   def popup
   end
 
+  def wow
+  end
+
   private
 
   def todo_params
