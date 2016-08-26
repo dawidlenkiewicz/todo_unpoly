@@ -13,16 +13,12 @@
     <%- @todos.each do |todo| %>
       <tbody>
         <tr>
-          <td> <%= todo.name %> </td>
+          <td> <%= link_to todo.name, todo_path(todo), "up-modal" => "##{dom_id(todo)}" %> </td>
           <td> <%= todo.description %> </td>
         </tr>
       </tbody>
     <% end %>
   </table>
-</div>
-
-<div class="modal-box">
-  <%= link_to "Modal", modal_path, "up-modal" => ".modal-box" %>
 </div>
 
 <div class="wow">
