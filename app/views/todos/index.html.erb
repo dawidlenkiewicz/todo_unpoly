@@ -1,19 +1,27 @@
 <h3>Todo List:</h3>
 
-<%= link_to "+", new_todo_path, class: "btn btn-default", "up-tooltip" => "Add new todo" %>
+<div class="small-top-margin">
+  <%= link_to "+", new_todo_path, class: "btn btn-default", "up-tooltip" => "Add new todo" %>
+</div>
 
-<ul class="nav nav-pills">
-  <li role="status"><a href="/todos" up-target=".todos" up-transition="move-right">All</a></li>
-  <li role="status"><a href="/todos?status=current" up-target=".todos" up-transition="move-right">Current</a></li>
-  <li role="status"><a href="/todos?status=completed" up-target=".todos" up-transition="move-right">Completed</a></li>
-</ul>
+<div class="small-top-margin">
+  <ul class="nav nav-pills">
+    <li role="status"><a href="/todos" up-target=".todos" up-transition="move-right">All</a></li>
+    <li role="status"><a href="/todos?status=current" up-target=".todos" up-transition="move-right">Current</a></li>
+    <li role="status"><a href="/todos?status=completed" up-target=".todos" up-transition="move-right">Completed</a></li>
+  </ul>
+</div>
 
-<ul class="todos list-group">
-  <% @todos.each do |todo| %>
-    <li class="list-group-item <%= 'list-group-item-success' if todo.completed? %>" id=<%= dom_id(todo) %>>
-      <%= form_for todo, url: toggle_todo_path(todo), html: { "up-target" => "#todo_#{todo.id}" } do |f| %>
-        <%= f.check_box :completed, "up-autosubmit" => "" %> <%= todo.name %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+
+<div class="small-top-margin">
+  <ul class="todos list-group">
+    <% @todos.each do |todo| %>
+      <li class="list-group-item <%= 'list-group-item-success' if todo.completed? %>" id=<%= dom_id(todo) %>>
+        <%= form_for todo, url: toggle_todo_path(todo), html: { "up-target" => "#todo_#{todo.id}" } do |f| %>
+          <%= f.check_box :completed, "up-autosubmit" => "" %> <%= todo.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
