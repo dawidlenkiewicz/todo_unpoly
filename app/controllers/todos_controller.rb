@@ -32,7 +32,8 @@ class TodosController < ApplicationController
     @todo.update(todo_params)
   end
 
-  private
+  def popup
+  end
 
   private
 
