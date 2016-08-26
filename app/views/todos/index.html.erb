@@ -1,6 +1,6 @@
 <h3>Todo List:</h3>
 
-<%= link_to "+", "#", class: "btn btn-default", "up-tooltip" => "Add new todo" %>
+<%= link_to "+", new_todo_path, class: "btn btn-default", "up-tooltip" => "Add new todo" %>
 
 <ul class="nav nav-pills">
   <li role="status"><a href="/todos" up-target=".todos" up-transition="move-right">All</a></li>

@@ -17,3 +17,17 @@
 //= require unpoly-bootstrap3
 //= require turbolinks
 //= require_tree .
+
+up.compiler('.spinner', function($element) {
+
+  show = function() { $element.show() };
+  hide = function() { $element.hide() };
+
+  hide();
+
+  return [
+    up.on('up:proxy:slow', show),
+    up.on('up:proxy:recover', hide)
+  ];
+
+});
